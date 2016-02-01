@@ -2,7 +2,7 @@
 <div align="center">
   <% if logged_in? && current_user.admin? %> 
     <div class="row">
-      <button type="button" class="btn btn-info btn-sm">
+      <button type="button" class="btn btn-info btn-xs">
         <%= link_to "Edit The Tag", edit_category_path(@category) %>
       </button>
     </div>

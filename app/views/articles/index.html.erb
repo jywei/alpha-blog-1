@@ -5,13 +5,16 @@
 
 <br>
 
-<div class="center">
-  <%= form_tag articles_path, method: :get do %>
-    <p>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", name: nil %>
-    </p>
-  <% end %>
+<div class="col-md-offset-4 col-md-4">
+  <div class="center form-group">
+    <%= form_tag articles_path, method: :get do %>
+      <p>
+        <%= text_field_tag :search, params[:search], class: "form-control" %>
+        <br>
+        <%= submit_tag "Search", name: nil, class: "btn btn-primary" %>
+      </p>
+    <% end %>
+  </div>
 </div>
 
 <br>

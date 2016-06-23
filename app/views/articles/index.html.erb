@@ -2,6 +2,20 @@
 <div align="center">
   <%= will_paginate %>
 </div>
+
+<br>
+
+<div class="center">
+  <%= form_tag articles_path, method: :get do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", name: nil %>
+    </p>
+  <% end %>
+</div>
+
+<br>
+
 <%= render 'article', obj: @articles %>
 <div align="center">
   <%= will_paginate %>

@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
       fulltext params[:search]
       paginate page: 1, per_page: 5
     end
-    @articles = @search.results
+    @articles = @search.present? ? @search.results : Article.quest(params[:quest])
   end
 
   def new

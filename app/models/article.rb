@@ -13,4 +13,12 @@ class Article < ActiveRecord::Base
     text :comments
   end
 
+  def self.quest(search)
+    if quest
+      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
+  end
+
 end
